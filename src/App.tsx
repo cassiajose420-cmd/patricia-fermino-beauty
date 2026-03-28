@@ -52,7 +52,7 @@ export default function App() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   return (
-    <div className="min-h-screen bg-brand-black selection:bg-brand-gold/30">
+    <div className="min-h-screen bg-[#0a0a0a] selection:bg-[#c5a059]/30">
       {/* Lightbox */}
       <AnimatePresence>
         {selectedImage && (
@@ -82,7 +82,7 @@ export default function App() {
       </AnimatePresence>
 
       {/* 1. HERO SECTION */}
-      <section className="relative min-h-[90vh] flex flex-col items-center justify-between overflow-hidden bg-brand-black pt-12">
+      <section className="relative min-h-[90vh] flex flex-col items-center justify-between overflow-hidden bg-[#0a0a0a] pt-12">
         <div className="absolute inset-0 z-0">
           <img 
             src={EXPERT.images.hero} 
@@ -90,7 +90,7 @@ export default function App() {
             className="w-full h-full object-cover object-top opacity-60"
             referrerPolicy="no-referrer"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-brand-black via-brand-black/40 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-[#0a0a0a]/40 to-transparent" />
         </div>
 
         <motion.div 
@@ -98,7 +98,7 @@ export default function App() {
           animate={{ opacity: 1, y: 0 }}
           className="relative z-10 mt-4"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-brand-gold/50 bg-brand-black/40 backdrop-blur-sm text-brand-gold text-xs font-bold tracking-widest uppercase">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#c5a059]/50 bg-[#0a0a0a]/40 backdrop-blur-sm text-[#c5a059] text-xs font-bold tracking-widest uppercase">
             <Award size={14} />
             Especialista em Extensão de Cílios
           </div>
@@ -111,7 +111,7 @@ export default function App() {
             transition={{ duration: 0.6 }}
           >
             <h1 className="text-4xl md:text-5xl font-serif text-white leading-tight mb-4">
-              Eu sou <span className="text-brand-gold">{EXPERT.name}</span>, sua especialista em cílios em {EXPERT.city.split('/')[0]}.
+              Eu sou <span className="text-[#c5a059]">{EXPERT.name}</span>, sua especialista em cílios em {EXPERT.city.split('/')[0]}.
             </h1>
             <p className="text-lg text-zinc-300 mb-8 max-w-md mx-auto">
               Realço a sua beleza natural com técnicas exclusivas e um olhar artístico que você só encontra aqui.
@@ -121,7 +121,7 @@ export default function App() {
               href={EXPERT.whatsapp}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center w-full bg-brand-gold hover:bg-brand-gold-dark text-brand-black font-bold py-5 px-8 rounded-full shadow-xl shadow-brand-gold/20 transition-all transform hover:scale-105 active:scale-95 gap-3 text-lg"
+              className="inline-flex items-center justify-center w-full bg-[#c5a059] hover:bg-[#a68446] text-[#0a0a0a] font-bold py-5 px-8 rounded-full shadow-xl shadow-[#c5a059]/20 transition-all transform hover:scale-105 active:scale-95 gap-3 text-lg"
             >
               <MessageCircle size={24} />
               Quero marcar um horário gratuito
@@ -135,7 +135,7 @@ export default function App() {
       </section>
 
       {/* 2. QUEM SOU EU */}
-      <section className="py-20 px-6 bg-brand-black">
+      <section className="py-20 px-6 bg-[#0a0a0a]">
         <div className="max-w-xl mx-auto">
           <div className="flex flex-col md:flex-row gap-10 items-center">
             <div className="w-full md:w-1/2">
@@ -159,7 +159,7 @@ export default function App() {
                   "Foco total em saúde ocular e naturalidade"
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-3 text-zinc-300">
-                    <CheckCircle2 className="text-brand-gold shrink-0 mt-1" size={20} />
+                    <CheckCircle2 className="text-[#c5a059] shrink-0 mt-1" size={20} />
                     <span>{item}</span>
                   </li>
                 ))}
@@ -199,28 +199,28 @@ export default function App() {
       </section>
 
       {/* 4. POR QUE CONFIAR EM MIM? */}
-      <section className="py-20 px-6 bg-brand-black">
+      <section className="py-20 px-6 bg-[#0a0a0a]">
         <div className="max-w-xl mx-auto">
           <h2 className="text-3xl font-serif text-center text-white mb-12">Por que escolher o meu atendimento?</h2>
           <div className="grid grid-cols-1 gap-6">
             {[
               {
-                icon: <Sparkles className="text-brand-gold" />,
+                icon: <Sparkles className="text-[#c5a059]" />,
                 title: "Avaliação Personalizada",
                 desc: "Cada olhar é único. Analiso seu rosto e fios para indicar a melhor técnica."
               },
               {
-                icon: <Award className="text-brand-gold" />,
+                icon: <Award className="text-[#c5a059]" />,
                 title: "Materiais Premium",
                 desc: "Utilizo apenas produtos de alta qualidade, testados e aprovados para sua segurança."
               },
               {
-                icon: <Heart className="text-brand-gold" />,
+                icon: <Heart className="text-[#c5a059]" />,
                 title: "Atendimento Humanizado",
                 desc: "Um ambiente acolhedor onde você é a prioridade absoluta do início ao fim."
               },
               {
-                icon: <CheckCircle2 className="text-brand-gold" />,
+                icon: <CheckCircle2 className="text-[#c5a059]" />,
                 title: "Foco no Resultado Real",
                 desc: "Minha meta é que você saia se sentindo maravilhosa e com cílios impecáveis."
               }
@@ -240,15 +240,15 @@ export default function App() {
       </section>
 
       {/* 5. CTA INTERMEDIÁRIO */}
-      <section className="py-16 px-6 bg-brand-gold text-brand-black text-center">
+      <section className="py-16 px-6 bg-[#c5a059] text-[#0a0a0a] text-center">
         <div className="max-w-md mx-auto">
-          <h2 className="text-3xl font-serif mb-4 text-brand-black">Sua beleza não pode esperar.</h2>
+          <h2 className="text-3xl font-serif mb-4 text-[#0a0a0a]">Sua beleza não pode esperar.</h2>
           <p className="mb-8 opacity-90">Garanta agora seu horário de avaliação gratuita e tire todas as suas dúvidas.</p>
           <a 
             href={EXPERT.whatsapp}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center w-full bg-brand-black text-brand-gold font-bold py-4 px-8 rounded-full shadow-lg gap-3 text-lg transition-transform hover:scale-105"
+            className="inline-flex items-center justify-center w-full bg-[#0a0a0a] text-[#c5a059] font-bold py-4 px-8 rounded-full shadow-lg gap-3 text-lg transition-transform hover:scale-105"
           >
             <MessageCircle size={22} />
             Quero marcar um horário gratuito
@@ -257,7 +257,7 @@ export default function App() {
       </section>
 
       {/* 6. COMO FUNCIONA */}
-      <section className="py-20 px-6 bg-brand-black">
+      <section className="py-20 px-6 bg-[#0a0a0a]">
         <div className="max-w-xl mx-auto">
           <h2 className="text-3xl font-serif text-center text-white mb-12">Como agendar seu horário</h2>
           <div className="space-y-12">
@@ -269,7 +269,7 @@ export default function App() {
               <div key={i} className="relative flex gap-6">
                 <div className="text-5xl font-serif text-zinc-800 absolute -left-4 -top-4 z-0">{item.step}</div>
                 <div className="relative z-10 flex gap-6">
-                  <div className="w-1 bg-brand-gold rounded-full shrink-0" />
+                  <div className="w-1 bg-[#c5a059] rounded-full shrink-0" />
                   <div>
                     <h3 className="text-xl font-bold text-white mb-2">{item.title}</h3>
                     <p className="text-zinc-400">{item.desc}</p>
@@ -279,7 +279,7 @@ export default function App() {
             ))}
           </div>
           <div className="mt-12 p-6 bg-zinc-900/50 rounded-2xl border border-zinc-800 text-center">
-            <p className="text-brand-gold font-medium">Lembre-se: Marcar um horário é totalmente gratuito e sem compromisso.</p>
+            <p className="text-[#c5a059] font-medium">Lembre-se: Marcar um horário é totalmente gratuito e sem compromisso.</p>
           </div>
         </div>
       </section>
@@ -299,7 +299,7 @@ export default function App() {
               className="rounded-2xl shadow-lg w-full border border-zinc-800"
               referrerPolicy="no-referrer"
             />
-            <div className="absolute bottom-4 left-4 right-4 bg-brand-black/90 backdrop-blur p-3 rounded-xl text-sm font-medium text-zinc-100 shadow-sm border border-zinc-800">
+            <div className="absolute bottom-4 left-4 right-4 bg-[#0a0a0a]/90 backdrop-blur p-3 rounded-xl text-sm font-medium text-zinc-100 shadow-sm border border-zinc-800">
               Certificação e atualização constante para você.
             </div>
           </div>
@@ -311,7 +311,7 @@ export default function App() {
               referrerPolicy="no-referrer"
             />
             <div className="bg-zinc-900 p-6 rounded-2xl shadow-md flex flex-col justify-center items-center text-center border border-zinc-800">
-              <Star className="text-brand-gold mb-2" fill="currentColor" />
+              <Star className="text-[#c5a059] mb-2" fill="currentColor" />
               <p className="text-sm font-bold text-white">Atendimento Exclusivo</p>
               <p className="text-xs text-zinc-500 mt-1">Sua satisfação é o meu maior troféu.</p>
             </div>
@@ -320,7 +320,7 @@ export default function App() {
       </section>
 
       {/* 8. CTA FINAL */}
-      <section className="py-24 px-6 bg-brand-black text-center">
+      <section className="py-24 px-6 bg-[#0a0a0a] text-center">
         <div className="max-w-xl mx-auto">
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
@@ -338,7 +338,7 @@ export default function App() {
               href={EXPERT.whatsapp}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center w-full bg-brand-gold hover:bg-brand-gold-dark text-brand-black font-bold py-6 px-10 rounded-full shadow-2xl shadow-brand-gold/20 transition-all transform hover:scale-105 active:scale-95 gap-4 text-xl"
+              className="inline-flex items-center justify-center w-full bg-[#c5a059] hover:bg-[#a68446] text-[#0a0a0a] font-bold py-6 px-10 rounded-full shadow-2xl shadow-[#c5a059]/20 transition-all transform hover:scale-105 active:scale-95 gap-4 text-xl"
             >
               <MessageCircle size={28} />
               QUERO MARCAR UM HORÁRIO GRATUITO
@@ -404,13 +404,13 @@ export default function App() {
         </div>
       </footer>
 
-      {/* Floating WhatsApp Button (Mobile Only) */}
+      {/* Botão Flutuante WhatsApp (Mobile Only) */}
       <div className="fixed bottom-6 right-6 z-40 md:hidden">
         <a 
           href={EXPERT.whatsapp}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center justify-center w-16 h-16 bg-brand-gold text-brand-black rounded-full shadow-2xl animate-bounce"
+          className="flex items-center justify-center w-16 h-16 bg-[#c5a059] text-[#0a0a0a] rounded-full shadow-2xl animate-bounce"
         >
           <MessageCircle size={32} />
         </a>
