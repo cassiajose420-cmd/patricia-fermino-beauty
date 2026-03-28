@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Cormorant Garamond", serif;
+  --font-sans: "Inter", sans-serif;
+  
+  --color-gold-50: #fdfbf7;
+  --color-gold-100: #f9f3e9;
+  --color-gold-200: #eeddbf;
+  --color-gold-300: #e2c28d;
+  --color-gold-400: #d5a65c;
+  --color-gold-500: #c18b3c;
+  --color-gold-600: #a6712f;
+  --color-gold-700: #8a5a28;
+  --color-gold-800: #724a25;
+  --color-gold-900: #5f3e22;
+
+  --color-rose-50: #fdf8f8;
+  --color-rose-100: #fbeeee;
+  --color-rose-200: #f8dede;
+  --color-rose-300: #f1c3c3;
+  --color-rose-400: #e69d9d;
+  --color-rose-500: #d47a7a;
+  --color-rose-600: #c15d5d;
+  --color-rose-700: #a14a4a;
+}
+
+@layer base {
+  body {
+    @apply font-sans text-zinc-900 bg-white;
+  }
+  
+  h1, h2, h3, h4 {
+    @apply font-serif;
+  }
+}
